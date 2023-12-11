@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Random Redirect</title>
+    <script type="text/javascript">
+        // Function to redirect to a random URL
+        function randomRedirect() {
+            // Array of two URLs
+            var urls = [
+                'https://www.google.com',
+                'https://www.youtube.com'
+            ];
+
+            // Generate a random number between 0 and 1
+            var randomIndex = Math.floor(Math.random() * 2);
+
+            // Redirect to the randomly chosen URL
+            window.location.href = urls[randomIndex];
+        }
+    </script>
 </head>
-<body>
-    <h1>Test Successful</h1>
+
+<body onload="randomRedirect();">
+    <p>Redirecting...</p>
 </body>
+
 </html>
